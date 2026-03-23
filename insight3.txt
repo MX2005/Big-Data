@@ -1,0 +1,1 @@
+The overall arrest rate in the dataset is 28.23%. Among crime categories with at least 500 incidents, PROSTITUTION has the highest arrest rate at 100.00% across 560 cases.
