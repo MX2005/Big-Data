@@ -1,0 +1,212 @@
+
+Top features for Cluster 0:
+Year                                     2009.164276
+Beat                                     383.263083
+Latitude                                 41.768830
+Community Area                           37.981949
+Ward                                     24.798343
+Hour                                     13.230013
+Month                                    5.378595
+District                                 3.617633
+DayOfWeek                                3.043039
+Loc_Residential                          0.408163
+Loc_Public                               0.351384
+Arrest                                   0.262410
+Crime_THEFT                              0.203610
+Crime_BATTERY                            0.186570
+Domestic                                 0.163265
+Loc_Commercial                           0.119687
+Crime_CRIMINAL DAMAGE                    0.105678
+Crime_NARCOTICS                          0.081431
+Crime_DECEPTIVE PRACTICE                 0.071597
+Crime_OTHER OFFENSE                      0.070385
+Crime_ASSAULT                            0.068499
+Loc_Other                                0.054220
+Crime_BURGLARY                           0.047417
+Crime_ROBBERY                            0.040277
+Crime_MOTOR VEHICLE THEFT                0.039469
+Loc_Transportation                       0.034620
+Loc_Institution                          0.031926
+Crime_CRIMINAL TRESPASS                  0.030444
+Crime_WEAPONS VIOLATION                  0.011787
+Crime_OFFENSE INVOLVING CHILDREN         0.008756
+Crime_CRIM SEXUAL ASSAULT                0.007139
+Crime_PUBLIC PEACE VIOLATION             0.005927
+Crime_SEX OFFENSE                        0.004647
+Crime_PROSTITUTION                       0.004378
+Crime_INTERFERENCE WITH PUBLIC OFFICER   0.003368
+Crime_KIDNAPPING                         0.001819
+Crime_ARSON                              0.001751
+Crime_GAMBLING                           0.001684
+Crime_LIQUOR LAW VIOLATION               0.001347
+Crime_INTIMIDATION                       0.000943
+Crime_STALKING                           0.000471
+Crime_CRIMINAL SEXUAL ASSAULT            0.000269
+Crime_OBSCENITY                          0.000202
+Crime_HUMAN TRAFFICKING                  0.000067
+Crime_NON-CRIMINAL                       0.000067
+Crime_HOMICIDE                           0.000000
+Crime_CONCEALED CARRY LICENSE VIOLATION  0.000000
+Crime_OTHER NARCOTIC VIOLATION           0.000000
+Crime_NON - CRIMINAL                     0.000000
+Crime_RITUALISM                          0.000000
+Longitude                                -87.608728
+
+Top features for Cluster 1:
+Year                                     2008.329786
+Beat                                     1652.500079
+Latitude                                 41.923034
+Ward                                     38.314138
+Community Area                           20.680778
+District                                 16.235187
+Hour                                     12.941779
+Month                                    4.936934
+DayOfWeek                                3.102621
+Loc_Public                               0.376092
+Loc_Residential                          0.336219
+Crime_THEFT                              0.264813
+Arrest                                   0.262351
+Crime_BATTERY                            0.151549
+Loc_Commercial                           0.146148
+Domestic                                 0.111835
+Crime_CRIMINAL DAMAGE                    0.098253
+Crime_NARCOTICS                          0.093169
+Crime_DECEPTIVE PRACTICE                 0.071724
+Loc_Other                                0.064893
+Crime_OTHER OFFENSE                      0.060604
+Crime_BURGLARY                           0.051549
+Crime_MOTOR VEHICLE THEFT                0.047021
+Crime_ASSAULT                            0.045989
+Loc_Transportation                       0.045036
+Crime_ROBBERY                            0.032566
+Loc_Institution                          0.031612
+Crime_CRIMINAL TRESPASS                  0.026052
+Crime_PROSTITUTION                       0.014376
+Crime_OFFENSE INVOLVING CHILDREN         0.007546
+Crime_SEX OFFENSE                        0.006116
+Crime_WEAPONS VIOLATION                  0.006116
+Crime_CRIM SEXUAL ASSAULT                0.005957
+Crime_PUBLIC PEACE VIOLATION             0.005957
+Crime_LIQUOR LAW VIOLATION               0.002780
+Crime_INTERFERENCE WITH PUBLIC OFFICER   0.002224
+Crime_ARSON                              0.001191
+Crime_GAMBLING                           0.001033
+Crime_STALKING                           0.001033
+Crime_KIDNAPPING                         0.001033
+Crime_OBSCENITY                          0.000556
+Crime_CRIMINAL SEXUAL ASSAULT            0.000397
+Crime_INTIMIDATION                       0.000238
+Crime_HUMAN TRAFFICKING                  0.000079
+Crime_NON-CRIMINAL                       0.000079
+Crime_HOMICIDE                           0.000000
+Crime_CONCEALED CARRY LICENSE VIOLATION  0.000000
+Crime_OTHER NARCOTIC VIOLATION           0.000000
+Crime_NON - CRIMINAL                     0.000000
+Crime_RITUALISM                          0.000000
+Longitude                                -87.705527
+
+Top features for Cluster 2:
+Year                                     2009.046356
+Beat                                     957.460293
+Latitude                                 41.826289
+Community Area                           37.022778
+Ward                                     28.326828
+Hour                                     13.234856
+District                                 9.346590
+Month                                    5.339141
+DayOfWeek                                3.098929
+Loc_Public                               0.427850
+Loc_Residential                          0.377001
+Arrest                                   0.309653
+Crime_BATTERY                            0.181544
+Crime_THEFT                              0.166523
+Domestic                                 0.144607
+Crime_NARCOTICS                          0.132787
+Crime_CRIMINAL DAMAGE                    0.106008
+Loc_Commercial                           0.083846
+Crime_OTHER OFFENSE                      0.062300
+Crime_ASSAULT                            0.056883
+Crime_BURGLARY                           0.053066
+Crime_MOTOR VEHICLE THEFT                0.052265
+Crime_DECEPTIVE PRACTICE                 0.051157
+Loc_Other                                0.045555
+Crime_ROBBERY                            0.041554
+Loc_Institution                          0.033551
+Loc_Transportation                       0.032197
+Crime_CRIMINAL TRESPASS                  0.022100
+Crime_WEAPONS VIOLATION                  0.013236
+Crime_PROSTITUTION                       0.012928
+Crime_OFFENSE INVOLVING CHILDREN         0.011389
+Crime_CRIM SEXUAL ASSAULT                0.008003
+Crime_PUBLIC PEACE VIOLATION             0.007880
+Crime_SEX OFFENSE                        0.005294
+Crime_INTERFERENCE WITH PUBLIC OFFICER   0.003755
+Crime_GAMBLING                           0.002832
+Crime_LIQUOR LAW VIOLATION               0.002586
+Crime_ARSON                              0.001908
+Crime_KIDNAPPING                         0.001724
+Crime_STALKING                           0.000677
+Crime_INTIMIDATION                       0.000616
+Crime_CRIMINAL SEXUAL ASSAULT            0.000431
+Crime_OBSCENITY                          0.000246
+Crime_NON - CRIMINAL                     0.000123
+Crime_RITUALISM                          0.000062
+Crime_CONCEALED CARRY LICENSE VIOLATION  0.000062
+Crime_HOMICIDE                           0.000062
+Crime_OTHER NARCOTIC VIOLATION           0.000000
+Crime_HUMAN TRAFFICKING                  0.000000
+Crime_NON-CRIMINAL                       0.000000
+Longitude                                -87.691275
+
+Top features for Cluster 3:
+Beat                                     2338.073706
+Year                                     2007.190077
+Latitude                                 41.891083
+Ward                                     38.840125
+Community Area                           28.686122
+District                                 20.996045
+Hour                                     13.220038
+Month                                    4.350551
+DayOfWeek                                3.097795
+Loc_Residential                          0.398011
+Loc_Public                               0.381592
+Arrest                                   0.294703
+Crime_THEFT                              0.205896
+Crime_BATTERY                            0.164190
+Domestic                                 0.130034
+Loc_Commercial                           0.115412
+Crime_CRIMINAL DAMAGE                    0.106783
+Crime_NARCOTICS                          0.095997
+Crime_OTHER OFFENSE                      0.083533
+Crime_DECEPTIVE PRACTICE                 0.060283
+Crime_ASSAULT                            0.057167
+Crime_BURGLARY                           0.051294
+Loc_Other                                0.050216
+Crime_MOTOR VEHICLE THEFT                0.049856
+Crime_ROBBERY                            0.035834
+Loc_Institution                          0.034156
+Crime_CRIMINAL TRESPASS                  0.026726
+Loc_Transportation                       0.020614
+Crime_PROSTITUTION                       0.012464
+Crime_OFFENSE INVOLVING CHILDREN         0.011026
+Crime_WEAPONS VIOLATION                  0.009108
+Crime_CRIM SEXUAL ASSAULT                0.006711
+Crime_PUBLIC PEACE VIOLATION             0.006112
+Crime_SEX OFFENSE                        0.005633
+Crime_INTERFERENCE WITH PUBLIC OFFICER   0.002756
+Crime_LIQUOR LAW VIOLATION               0.002397
+Crime_ARSON                              0.002037
+Crime_KIDNAPPING                         0.001558
+Crime_GAMBLING                           0.001198
+Crime_STALKING                           0.000360
+Crime_CRIMINAL SEXUAL ASSAULT            0.000360
+Crime_INTIMIDATION                       0.000360
+Crime_NON-CRIMINAL                       0.000120
+Crime_HOMICIDE                           0.000120
+Crime_OTHER NARCOTIC VIOLATION           0.000120
+Crime_HUMAN TRAFFICKING                  0.000000
+Crime_CONCEALED CARRY LICENSE VIOLATION  0.000000
+Crime_OBSCENITY                          0.000000
+Crime_NON - CRIMINAL                     0.000000
+Crime_RITUALISM                          0.000000
+Longitude                                -87.691194
