@@ -1,5 +1,12 @@
 # Crime Data Analysis & Clustering
 
+## Team Members
+### - Mahmoud Khaled : 231000616
+### - Youssef Alaa   : 231000861
+### - Youssef Kandil : 231000562
+### - Ziad Khaled    : 231000621
+
+
 ##  Overview
 This project performs exploratory data analysis and clustering on crime data.  
 It includes:
