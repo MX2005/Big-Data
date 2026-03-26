@@ -1,0 +1,9 @@
+results/
+*.csv
+*.png
+*.txt
+__pycache__/
+*.pyc
+.git
+.gitignore
+.ipynb_checkpoints/

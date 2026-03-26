@@ -1,0 +1,21 @@
+K-Means Clustering Results
+==========================
+Input file: data_preprocessed.csv
+Number of selected features: 10
+Selected features:
+- Arrest
+- Domestic
+- Beat
+- District
+- Ward
+- Community Area
+- Latitude
+- Longitude
+- Month
+- DayOfWeek
+
+Samples per cluster:
+Cluster 0: 2086551 samples
+Cluster 1: 874668 samples
+Cluster 2: 2839989 samples
+Cluster 3: 1838882 samples

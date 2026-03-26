@@ -1,0 +1,1 @@
+The most frequent crime category is THEFT, with 1,612,557 incidents out of 7,640,090 total records (21.11%). The second most frequent category is BATTERY, with 1,402,112 incidents (18.35%).

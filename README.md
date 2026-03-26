@@ -21,7 +21,7 @@ The generated outputs are:
 - `summary_plot.png`
 - `clusters.txt`
 
-## Expected Submission Structure
+## Project Structure
 
 ```text
 customer-analytics/
