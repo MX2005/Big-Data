@@ -1,10 +1,4 @@
-# CSCI461 Assignment 1 - Crime Data Analytics Pipeline
-
-## Course Information
-
-- **Course:** CSCI461 - Introduction to Big Data
-- **Assignment:** Assignment #1
-- **Semester:** Spring 2026
+# Crime Data Analytics Pipeline
 
 ## Team Members
 
