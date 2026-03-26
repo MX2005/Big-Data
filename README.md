@@ -24,7 +24,7 @@ The generated outputs are:
 ## Project Structure
 
 ```text
-customer-analytics/
+crime-analysis/
 ├── Dockerfile
 ├── ingest.py
 ├── preprocess.py
@@ -53,8 +53,8 @@ customer-analytics/
 Use the following commands to build and run the container:
 
 ```bash
-docker build -t customer-analytics .
-docker run -it --name customer-analytics-run customer-analytics
+docker build -t crime-analysis .
+docker run -it --name crime-analysis-run crime-analysis
 ```
 
 Do not use `--rm` here, because `summary.sh` needs the container to still exist in order to copy the output files.
@@ -91,7 +91,7 @@ Then, on the host machine:
 
 ```bash
 chmod +x summary.sh
-./summary.sh customer-analytics-run
+./summary.sh crime-analysis-run
 ```
 
 ## Output Description
@@ -155,7 +155,7 @@ The `summary.sh` script:
 
 ## Final Checklist Before Submission
 
-- Ensure the final `customer-analytics/` folder matches the required assignment structure
+- Ensure the final `crime-analysis/` folder matches the required assignment structure
 - Ensure `results/` contains the generated `.csv`, `.txt`, and `.png` files
-- Include this README inside the final `customer-analytics/` folder
+- Include this README inside the final `crime-analysis/` folder
 - Verify all team members understand each stage of the pipeline before the discussion
