@@ -1,146 +1,177 @@
-# Crime Data Analysis & Clustering
+# CSCI461 Assignment 1 - Crime Data Analytics Pipeline
+
+## Course Information
+
+- **Course:** CSCI461 - Introduction to Big Data
+- **Assignment:** Assignment #1
+- **Semester:** Spring 2026
 
 ## Team Members
-### - Mahmoud Khaled : 231000616
-### - Youssef Alaa   : 231000861
-### - Youssef Kandil : 231000562
-### - Ziad Khaled    : 231000621
 
+- Youssef Kandil
+- Mahmoud Khaled
+- Youssef Alaa
+- Ziad Abdelwahab
 
-##  Overview
-This project performs exploratory data analysis and clustering on crime data.  
-It includes:
-- Distribution analysis (Histogram)
-- Feature relationships (Pairplot)
-- Correlation analysis (Heatmap)
-- Clustering insights with top features per cluster
+## Project Overview
 
----
+This project builds a reproducible big data pipeline for a raw crime dataset. The pipeline starts from a CSV file, performs preprocessing, generates textual insights, creates summary visualizations, and applies K-Means clustering.
 
-##  Docker Setup
+The generated outputs are:
 
-### Build Docker Image
-```bash
-docker build -t crime-analysis .
+- `data_raw.csv`
+- `data_preprocessed.csv`
+- `insight1.txt`
+- `insight2.txt`
+- `insight3.txt`
+- `summary_plot.png`
+- `clusters.txt`
+
+## Expected Submission Structure
+
+```text
+customer-analytics/
+├── Dockerfile
+├── ingest.py
+├── preprocess.py
+├── analytics.py
+├── visualize.py
+├── cluster.py
+├── summary.sh
+├── README.md
+└── results/
 ```
 
-### Run Container
+## Important Note
+
+In the current workspace, the Docker support files are not yet placed exactly as required by the assignment:
+
+- `Big data Assignement 1/Docker/Dockerfile.txt` should be renamed and moved to `Dockerfile`
+- `Big data Assignement 1/Docker/ingest.py` should be moved to the project root as `ingest.py`
+- `Cluster.py` should be renamed to `cluster.py`
+
+Before final submission, make sure the filenames match the assignment exactly.
+
+## Technologies Used
+
+- Python 3.11
+- pandas
+- numpy
+- matplotlib
+- seaborn
+- scikit-learn
+- scipy
+- requests
+- Docker
+
+## Docker Build And Run Commands
+
+After arranging the files in the final required structure, use:
+
 ```bash
-docker run -it --rm crime-analysis
+docker build -t customer-analytics .
+docker run -it --name customer-analytics-run customer-analytics
 ```
 
-### Run with Mounted Volume (optional)
-```bash
-docker run -it --rm -v $(pwd):/app crime-analysis
+Do not use `--rm` here, because `summary.sh` needs the container to still exist in order to copy the output files.
+
+## Execution Flow
+
+The intended pipeline flow is:
+
+```text
+ingest.py -> preprocess.py -> analytics.py -> visualize.py -> cluster.py
 ```
 
----
+The execution order used for this project is:
 
-##  Execution Flow
+1. `ingest.py` reads the raw dataset path from the command line and saves a copy as `data_raw.csv`.
+2. `preprocess.py` loads the latest CSV file, removes unnecessary columns, fills missing values, removes duplicates, extracts time features, and encodes grouped categorical values.
+3. `analytics.py` generates textual insights and saves them as `insight1.txt`, `insight2.txt`, and `insight3.txt`. In the current codebase, `preprocess.py` already calls `analytics.py` automatically.
+4. `visualize.py` generates a summary figure containing the distribution of crimes by hour, incident counts by month, and a correlation heatmap.
+5. `cluster.py` applies K-Means clustering on numeric features and writes the cluster output to `clusters.txt`.
+6. `summary.sh` copies all `.csv`, `.txt`, and `.png` outputs from the container to the host `results/` directory, then stops and removes the container.
 
-1. Load dataset  
-2. Perform preprocessing:
-   - Handle missing values
-   - Encode categorical features
-3. Exploratory Data Analysis (EDA):
-   - Histogram of crime distribution by hour
-   - Pairplot for relationships
-   - Correlation matrix
-4. Apply clustering algorithm (e.g., K-Means)
-5. Extract top features for each cluster
-6. Visualize results
+## Example Commands Inside The Container
 
----
+After opening the container shell, run the pipeline in this order:
 
-##  Sample Outputs
+```bash
+python ingest.py <path_to_raw_dataset.csv>
+python preprocess.py data_raw.csv
+python visualize.py data_preprocessed.csv
+python cluster.py
+```
 
-### 1. Distribution of Crimes by Hour
-![Histogram](Screenshot 2026-03-24 002816.png)
+Then, on the host machine:
 
----
+```bash
+chmod +x summary.sh
+./summary.sh customer-analytics-run
+```
 
-### 2. Pairplot Analysis
-![Pairplot](Screenshot 2026-03-24 002848.png)
+## Output Description
 
----
+### 1. Raw And Processed Data
 
-### 3. Correlation Matrix
-![Correlation](Screenshot 2026-03-24 002920.png)
+- `data_raw.csv`: exact copy of the input dataset
+- `data_preprocessed.csv`: cleaned and transformed dataset used by the later stages
 
----
+### 2. Textual Insights
 
-##  Clustering Results
+The current generated insights are:
 
-### Cluster 0 - Key Features
-Year: 2009.164276  
-Beat: 383.263083  
-Latitude: 41.768830  
-Community Area: 37.981949  
-Ward: 24.798343  
-Hour: 13.230013  
-Month: 5.378595  
-District: 3.617633  
-DayOfWeek: 3.043039  
-Loc_Residential: 0.408163  
-Loc_Public: 0.351384  
-Arrest: 0.262410  
-Top Crimes: THEFT, BATTERY, CRIMINAL DAMAGE  
+```text
+insight1.txt
+The most frequent crime in the dataset is THEFT, with 10,780 incidents out of 52,025 total records (20.72%). The second most common category is BATTERY with 8,997 incidents (17.29%).
 
----
+insight2.txt
+Public locations contain the largest share of incidents, with 20,086 records (38.61%). The busiest hour is 12:00, when 3,053 incidents were recorded. Friday is the peak day with 8,379 incidents (16.11%).
 
-### Cluster 1 - Key Features
-Year: 2008.329786  
-Beat: 1652.500079  
-Latitude: 41.923034  
-Ward: 38.314138  
-Community Area: 20.680778  
-District: 16.235187  
-Hour: 12.941779  
-Month: 4.936934  
-DayOfWeek: 3.102621  
-Loc_Public: 0.376092  
-Loc_Residential: 0.336219  
-Arrest: 0.262351  
-Top Crimes: THEFT, BATTERY, NARCOTICS  
+insight3.txt
+The overall arrest rate in the dataset is 28.23%. Among crime categories with at least 500 incidents, PROSTITUTION has the highest arrest rate at 100.00% across 560 cases.
+```
 
----
+### 3. Visualization
 
-### Cluster 2 - Key Features
-Year: 2009.046356  
-Beat: 957.460293  
-Latitude: 41.826289  
-Community Area: 37.022778  
-Ward: 28.326828  
-Hour: 13.234856  
-District: 9.346590  
-Month: 5.339141  
-DayOfWeek: 3.098929  
-Loc_Public: 0.427850  
-Loc_Residential: 0.377001  
-Arrest: 0.309653  
-Top Crimes: BATTERY, THEFT, NARCOTICS  
+The file `summary_plot.png` contains the three required plots in one summary image.
 
----
+![Summary Plot](summary_plot.png)
 
-### Cluster 3 - Key Features
-Beat: 2338.073706  
-Year: 2007.190077  
-Latitude: 41.891083  
-Ward: 38.840125  
-Community Area: 28.686122  
-District: 20.996045  
-Hour: 13.220038  
-Month: 4.350551  
-DayOfWeek: 3.097795  
-Loc_Residential: 0.398011  
-Loc_Public: 0.381592  
-Arrest: 0.294703  
-Top Crimes: THEFT, BATTERY, CRIMINAL DAMAGE  
+### 4. Clustering Output
 
----
+`clusters.txt` contains the K-Means clustering output. Example excerpt:
 
-## 📈 Key Insights
+```text
+Top features for Cluster 0:
+Year                                     2009.164276
+Beat                                     383.263083
+Latitude                                 41.768830
+Community Area                           37.981949
+Ward                                     24.798343
+Hour                                     13.230013
+Month                                    5.378595
+District                                 3.617633
+```
 
-- Crime peaks during afternoon and evening hours  
-- Weak correlation between most features  
-- Strong negative correlation between Ward and Community Area  
+## Results Collection
+
+The `summary.sh` script:
+
+- copies all generated `.csv`, `.txt`, and `.png` files from `/app/pipeline/`
+- saves them into `results/` on the host
+- stops the running container
+- removes the container afterward
+
+## Reproducibility Notes
+
+- The pipeline is designed to run inside a Docker container based on `python:3.11-slim`.
+- The dataset should be raw and not pre-cleaned, as required in the assignment instructions.
+- All outputs can be regenerated by running the same containerized workflow again.
+
+## Final Checklist Before Submission
+
+- Rename and place files exactly as required in the assignment
+- Ensure `results/` contains the generated `.csv`, `.txt`, and `.png` files
+- Include this README inside the final `customer-analytics/` folder
+- Verify all team members understand each stage of the pipeline before the discussion
