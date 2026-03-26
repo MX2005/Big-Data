@@ -42,16 +42,6 @@ customer-analytics/
 └── results/
 ```
 
-## Important Note
-
-In the current workspace, the Docker support files are not yet placed exactly as required by the assignment:
-
-- `Big data Assignement 1/Docker/Dockerfile.txt` should be renamed and moved to `Dockerfile`
-- `Big data Assignement 1/Docker/ingest.py` should be moved to the project root as `ingest.py`
-- `Cluster.py` should be renamed to `cluster.py`
-
-Before final submission, make sure the filenames match the assignment exactly.
-
 ## Technologies Used
 
 - Python 3.11
@@ -66,7 +56,7 @@ Before final submission, make sure the filenames match the assignment exactly.
 
 ## Docker Build And Run Commands
 
-After arranging the files in the final required structure, use:
+Use the following commands to build and run the container:
 
 ```bash
 docker build -t customer-analytics .
@@ -171,7 +161,7 @@ The `summary.sh` script:
 
 ## Final Checklist Before Submission
 
-- Rename and place files exactly as required in the assignment
+- Ensure the final `customer-analytics/` folder matches the required assignment structure
 - Ensure `results/` contains the generated `.csv`, `.txt`, and `.png` files
 - Include this README inside the final `customer-analytics/` folder
 - Verify all team members understand each stage of the pipeline before the discussion
